@@ -10,7 +10,7 @@ export default function RedirectPage() {
     async function getData() {
       try {
         const response = await axios.get(
-          "http://localhost:3000/api/v1/redirect/" + params.key
+          "/api/v1/redirect/" + params.key
         );
         setUrl(response.data.url); // Accessing data correctly
         if (response.data.url) {

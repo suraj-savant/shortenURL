@@ -52,7 +52,7 @@ Router.get("/redirect/:key", async (req, res) => {
       message: "Url doesn't exist",
     });
   }
-  console.log(data);
+  
   res.status(200).json({
     url: data.url
   });

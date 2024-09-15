@@ -8,11 +8,11 @@ export default function MainPage() {
   async function shortUrl() {
 
     try {
-      const rsp = await axios.post("http://localhost:3000/api/v1/shorturl", {
+      const rsp = await axios.post("/api/v1/shorturl", {
        "url": url,
       });
       console.log(rsp)
-      setShortenUrl("http://localhost:5173/"+rsp.data.url)
+      setShortenUrl(window.location.href+rsp.data.url)
     } catch (error) {
       console.log("Error in shortning url " + error);
     }
